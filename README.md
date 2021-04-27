@@ -1,6 +1,6 @@
 # Task3
 
-### COMMIT
+### COMMIT (SO)
 When you make a change to a file, you want to record the change. Commits are snapshots or save points within GIT Version Control which records these changes; basically a way if recording the a state of a program on a branch. When a commit is made, a code is made which is known as a SHA-1 hash. 
 
 By using the command ****git commit**** this creates a snapshot of your repository (aka commit). Over time the commits made tell a story of the history of your repository and how you arrived at its current state. 
