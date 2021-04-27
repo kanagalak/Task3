@@ -67,14 +67,23 @@ git checkout master
 git merge develop
 git branch -d feature_branch
 
-# Task3
 
-### COMMIT (SO)
-When you make a change to a file, you want to record the change. Commits are snapshots or save points within GIT Version Control which records these changes; basically a way if recording the a state of a program on a branch. When a commit is made, a code is made which is known as a SHA-1 hash. 
 
-By using the command ****git commit**** this creates a snapshot of your repository (aka commit). Over time the commits made tell a story of the history of your repository and how you arrived at its current state. 
-
-Commits are always stored in the the branch you are checkedout to, so it is best practice to run **git status** to confirm it is being stored in the correct location. You will also need to stage any new changes prior to the commit, which can be done with the **git add [file]** command.
-
-In the case a commit needs to be undone, there are two ways to do so - **git revert** and **git reset**. **git revert** is the preferred option as it undoes the change, acknowledges the change and keeps a record of the change. **git reset** on the other hand removes head and branch pointer (removes commit as well) and does not make a record. This option is usually avoided as it can result in loss of work/project. It is advised you discuss with your team before actioning this command.
-
+Adding Files 
+ 
+Here we are going to look at how we add files on Git and what we need to do once we have added a file. 
+When we want to add a file on Git there are two ways we can go about this. The first is by entering the command touch fileName.fileExtension (touch Newfile.txt) or you can enter the command echo > fileName.fileExtension (echo > Newfile.txt).  
+Doing this adds the file but it becomes an untracked file which means you will not be able to track the changes made to the file. In order to turn it into a tracked file you must run a git status to confirm it is an untracked file (untracked files are in red) and then you must add the file using the following command git add fileName.fileExtension (git add Newfile.txt) Once this has been done git will confirm that these changes are set to be committed and the files should be coloured green as shown below.  
+Renaming, copying and deleting files 
+I will now show the commands for renaming, copying and deleting a file. 
+ 
+Renaming  
+Mv fileName.fileExtension NewFileName.FileExtension 
+Ren fileName.fileExtension NewFileName.FileExtension 
+Copying  
+Cp fileName.fileExtension fileCopy.fileExtension 
+Copy-Item fileName.fileExtension 
+Copy-item fileName.fileExtension fileCopy.FileExtension 
+Deleting 
+Rm fileName.fileExtension 
+Del fileName.fileExtension 
