@@ -54,3 +54,23 @@ git merge feature_branch
 git checkout master
 git merge develop
 git branch -d feature_branch
+
+
+Adding Files 
+ 
+Here we are going to look at how we add files on Git and what we need to do once we have added a file. 
+When we want to add a file on Git there are two ways we can go about this. The first is by entering the command touch fileName.fileExtension (touch Newfile.txt) or you can enter the command echo > fileName.fileExtension (echo > Newfile.txt).  
+Doing this adds the file but it becomes an untracked file which means you will not be able to track the changes made to the file. In order to turn it into a tracked file you must run a git status to confirm it is an untracked file (untracked files are in red) and then you must add the file using the following command git add fileName.fileExtension (git add Newfile.txt) Once this has been done git will confirm that these changes are set to be committed and the files should be coloured green as shown below.  
+Renaming, copying and deleting files 
+I will now show the commands for renaming, copying and deleting a file. 
+ 
+Renaming  
+Mv fileName.fileExtension NewFileName.FileExtension 
+Ren fileName.fileExtension NewFileName.FileExtension 
+Copying  
+Cp fileName.fileExtension fileCopy.fileExtension 
+Copy-Item fileName.fileExtension 
+Copy-item fileName.fileExtension fileCopy.FileExtension 
+Deleting 
+Rm fileName.fileExtension 
+Del fileName.fileExtension 
